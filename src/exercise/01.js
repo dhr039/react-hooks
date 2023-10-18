@@ -2,28 +2,28 @@
 // http://localhost:3000/isolated/exercise/01.js
 
 import * as React from 'react'
-import {useState} from "react";
+import {useState} from 'react'
 
 function Greeting({initName = ''}) {
-    const [name, setName] = useState(initName)
+  const [name, setName] = useState(initName)
 
-    function handleChange(event) {
-        setName(event.target.value)
-    }
+  function handleChange(event) {
+    setName(event.target.value)
+  }
 
-    return (
-        <div>
-            <form>
-                <label htmlFor="name">Name: </label>
-                <input value={name} onChange={handleChange} id="name"/>
-            </form>
-            {name ? <strong>Hello {name}</strong> : 'Please type your name'}
-        </div>
-    )
+  return (
+    <div>
+      <form>
+        <label htmlFor="name">Name: </label>
+        <input value={name} onChange={handleChange} id="name" />
+      </form>
+      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+    </div>
+  )
 }
 
 function App() {
-    return <Greeting initName="QQQ"/>
+  return <Greeting initName="QQQ" />
 }
 
 export default App
